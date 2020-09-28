@@ -1,0 +1,10 @@
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\bin\Debug\KomodoIns_Console.exe.config
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\bin\Debug\KomodoIns_Console.exe
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\bin\Debug\KomodoIns_Console.pdb
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\bin\Debug\KomodoIns_Repo.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\bin\Debug\KomodoIns_Repo.pdb
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\obj\Debug\KomodoIns_Console.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\obj\Debug\KomodoIns_Console.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\obj\Debug\KomodoIns_Console.csproj.CopyComplete
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\obj\Debug\KomodoIns_Console.exe
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Console\obj\Debug\KomodoIns_Console.pdb
