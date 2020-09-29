@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.X509Certificates;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -23,11 +24,14 @@ namespace KomodoIns_Console
             while (keepRunning)
             {
                 //list of menu items for claims agent to pick from
-                Console.WriteLine("Select a menu option:\n\n" +
+                Console.WriteLine("WELCOME TO THE KOMODO INSURANCE CLAIM MENU\n\n" +
+                    "------------------------------------\n\n" +
+                    "Select a menu option:\n\n" +
                     "1. View All Existing Claims\n" +
                     "2. Review the Next Claim\n" +
                     "3. Enter a New Claim\n" +
-                    "4. Exit");
+                    "4. Exit\n\n" +
+                    "-----------------------------------");
 
                 //Get the Agent's menu pick
                 string input = Console.ReadLine();
@@ -37,6 +41,12 @@ namespace KomodoIns_Console
                 {
                     case "1":
                         ViewAllClaims();
+                        Console.Clear();
+                        Console.WriteLine("No more claims to view.\n" +
+                            "Press enter to return to main menu...");
+                        Console.ReadKey();
+                        Console.Clear();
+
                         break;
 
                     case "2":
@@ -45,26 +55,30 @@ namespace KomodoIns_Console
 
                     case "3":
                         EnterNewClaim();
+                        Console.Clear();
+                        Console.WriteLine("\nClaim successfully handled.\n" +
+                            "Press enter to return to the main menu...");
+                        Console.ReadKey();
+                        Console.Clear();
                         break;
 
                     case "4":
-                        Console.WriteLine("Exiting Menu...");
                         keepRunning = false;
+                        Console.WriteLine("Exiting Menu, GOOD-BYE!");
+                        Console.ReadKey();
                         break;
 
                     default:
                         Console.WriteLine("Please enter a valid menu item");
                         break;
-                }
-                Console.WriteLine("Press any key to continue...");
-                Console.ReadKey();
-                Console.Clear();
+                }              
             }
         }
+
         //View all claims
         private void ViewAllClaims()
         {
-            List<ClaimInfo> listOfClaims = _claimsRepo.ViewAllClaims();
+            Queue<ClaimInfo> listOfClaims = _claimsRepo.ViewAllClaims();
             foreach(ClaimInfo claim in listOfClaims)
             {
                 Console.Clear();
@@ -78,40 +92,48 @@ namespace KomodoIns_Console
                     $"Is Claim Valid: {claim.IsValid}\n");
                 Console.WriteLine("Press any key to see next claim...");
                 Console.ReadKey();
-                Console.Clear();
+               
             }
         }
 
         //Display first claim in list
-        private void ViewFirstClaim()
+
+        public void ViewFirstClaim()
         {
-           List<ClaimInfo> listOfClaims = _claimsRepo.ViewAllClaims();
+            ClaimInfo claim = _claimsRepo.GetNextClaim();
 
-            //find the first claim in the list
-            if (listOfClaims.Count > 0)
-            {
-                object firstClaim = listOfClaims[1];
-            }
-
-            //Display that firstClaim object
-
-            ClaimInfo displayClaim = new ClaimInfo();
-            Console.WriteLine(
-                $"Claim ID: {displayClaim.ClaimId}\n" +
-                    $"Claim Type: {displayClaim.TypeOfClaim}\n" +
-                    $"Claim Description: {displayClaim.Description}\n" +
-                    $"Claim Amount: {displayClaim.ClaimAmount}\n" +
-                    $"Date of Incident: {displayClaim.DateOfIncident}\n" +
-                    $"Date of Claim: {displayClaim.DateOfClaim}\n" +
-                    $"Is Claim Valid: {displayClaim.IsValid}\n");
-            Console.WriteLine("Press any key to see next claim...");
-            Console.ReadKey();
             Console.Clear();
+            Console.WriteLine(
+                $"Claim ID: {claim.ClaimId}\n" +
+                $"Claim Type: {claim.TypeOfClaim}\n" +
+                $"Claim Description: {claim.Description}\n" +
+                $"Claim Amount: {claim.ClaimAmount}\n" +
+                $"Date of Incident: {claim.DateOfIncident}\n" +
+                $"Date of Claim: {claim.DateOfClaim}\n" +
+                $"Is Claim Valid: {claim.IsValid}\n");
 
-        }
+            Console.WriteLine("Are you available to work on this claim? Please enter y or n");
+            
+            string input = Console.ReadLine();
 
-      
-
+            if (input == "y")
+            {
+                _claimsRepo.DeleteClaimfromQueue();
+                Console.WriteLine("Claim Successfully Completed.\n" +
+                    "Press enter to return to the main menu...");
+                Console.ReadKey();
+                Console.Clear();
+                
+            }
+            else
+            {
+             
+               Console.WriteLine("No action at this time.  Returning to Main Menu...");
+               Console.ReadKey();
+               Console.Clear();
+            }
+                    
+        }   
 
         //Enter a new claim
         private void EnterNewClaim()
@@ -164,7 +186,7 @@ namespace KomodoIns_Console
            
             _claimsRepo.AddClaimToList(newClaim);
         }
-        //Seed method to add existing claims to repo
+        //Add existing claims to repo
         private void ExistingClaimList()
         {
             ClaimInfo claim1 = new ClaimInfo(1,ClaimType.Car ,"Car accident on 465", 400m, Convert.ToDateTime("4/25/2018"), Convert.ToDateTime("4/27/2018"), true);
@@ -172,7 +194,7 @@ namespace KomodoIns_Console
             ClaimInfo claim3 = new ClaimInfo(3, ClaimType.Theft, "Stolen pancakes", 4m, Convert.ToDateTime("4/27/2018"), Convert.ToDateTime("6/1/2018"), false);
             _claimsRepo.AddClaimToList(claim1);
             _claimsRepo.AddClaimToList(claim2);
-            _claimsRepo.AddClaimToList(claim3);
+            _claimsRepo.AddClaimToList(claim3); 
         }
     }
 }

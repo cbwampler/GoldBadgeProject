@@ -18,7 +18,7 @@ namespace KomodoIns_Repo
         public DateTime DateOfClaim { get; set; }
         public bool IsValid { get; set; }
 
-        public ClaimInfo() { }
+       public ClaimInfo() { }
         public ClaimInfo(int claimId, ClaimType typeOfClaim, string description, decimal claimAmount, DateTime dateOfIncident, DateTime dateOfClaim, bool isValid )
         {
             ClaimId = claimId;

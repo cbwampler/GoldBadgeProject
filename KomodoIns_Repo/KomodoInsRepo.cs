@@ -9,40 +9,18 @@ using System.Threading.Tasks;
 namespace KomodoIns_Repo
 {
     public class KomodoInsRepo
-    { //location for all items to be held
-        private List<ClaimInfo> _listOfClaims = new List<ClaimInfo>();
+    { 
+    //Location for all items to be held
+        private Queue<ClaimInfo> _claimQ = new Queue<ClaimInfo>();
 
         //Method for Agent to see all claims
-        public List<ClaimInfo> ViewAllClaims()
+        public Queue<ClaimInfo> ViewAllClaims()
         {
-            return _listOfClaims;
+            return _claimQ;
         }
 
         //Method for Agent to take care of next claim by either pressing 'Y'to handle the claim, or 'N' to go back to the main menu
-        public bool DisplayFirstClaim(int existingClaimId, ClaimInfo newClaim)
-        {
-            
-            //Find the claim in queue
-            ClaimInfo existingClaim = GetClaimById(existingClaimId);
-                        
-
-            //Show the claim information
-            if(existingClaim != null)
-            {
-                existingClaim.ClaimId = newClaim.ClaimId;
-                existingClaim.TypeOfClaim = newClaim.TypeOfClaim;
-                existingClaim.Description = newClaim.Description;
-                existingClaim.ClaimAmount = newClaim.ClaimAmount;
-                existingClaim.DateOfIncident = newClaim.DateOfIncident;
-                existingClaim.DateOfClaim = newClaim.DateOfClaim;
-                existingClaim.IsValid = newClaim.IsValid;
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
+        
 
 
         //Method for agent to enter a new claim.  New claim will be entered by providing the following information;
@@ -56,20 +34,21 @@ namespace KomodoIns_Repo
 
         public void AddClaimToList(ClaimInfo claim)
         {
-            _listOfClaims.Add(claim);
+            _claimQ.Enqueue(claim);
         }
 
-        //Create a Helper method to find the existing claim to manipulate
-        public ClaimInfo GetClaimById(int claimId)
+        //View first claim in queue
+        public ClaimInfo GetNextClaim()
         {
-            foreach (ClaimInfo claim in _listOfClaims)
-            {
-                if (claim.ClaimId == claimId)
-                {
-                    return claim;
-                }
-            }
-            return null;
+            return _claimQ.Peek();
         }
+
+        //Delete first claim in queue
+        public ClaimInfo DeleteClaimfromQueue()
+        {
+            return _claimQ.Dequeue();
+        }
+
+        //Update a claim in a queue
     }
 }
