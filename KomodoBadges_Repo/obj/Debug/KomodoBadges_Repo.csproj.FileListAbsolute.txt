@@ -1,0 +1,6 @@
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\bin\Debug\KomodoBadges_Repo.dll
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\bin\Debug\KomodoBadges_Repo.pdb
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.dll
+C:\ElevenFiftyProjects\Komodo\KomodoBadges_Repo\obj\Debug\KomodoBadges_Repo.pdb

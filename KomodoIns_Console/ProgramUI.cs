@@ -123,16 +123,13 @@ namespace KomodoIns_Console
                     "Press enter to return to the main menu...");
                 Console.ReadKey();
                 Console.Clear();
-                
             }
             else
             {
-             
                Console.WriteLine("No action at this time.  Returning to Main Menu...");
                Console.ReadKey();
                Console.Clear();
-            }
-                    
+            }     
         }   
 
         //Enter a new claim

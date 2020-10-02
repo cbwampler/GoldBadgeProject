@@ -19,17 +19,7 @@ namespace KomodoIns_Repo
             return _claimQ;
         }
 
-        //Method for Agent to take care of next claim by either pressing 'Y'to handle the claim, or 'N' to go back to the main menu
         
-
-
-        //Method for agent to enter a new claim.  New claim will be entered by providing the following information;
-        //Enter the Claim ID:
-        //Enter the Claim Type:
-        //Enter the claim description:
-        //Enter the Amount of Damage:
-        //Enter the Date of the Incident:
-        //Enter the Date of Claim:
         //Evaluate the date of the incident and date of claim.  Determine whether the claim is valid or not( if it is within the 30-day grace period to file a claim)
 
         public void AddClaimToList(ClaimInfo claim)
@@ -48,7 +38,5 @@ namespace KomodoIns_Repo
         {
             return _claimQ.Dequeue();
         }
-
-        //Update a claim in a queue
     }
 }
