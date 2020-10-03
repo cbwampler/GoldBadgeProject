@@ -19,12 +19,6 @@ namespace KomodoCafe_Tests
             MenuItems menuItem2 = new MenuItems(2, "meal2", "Meal2 Description", "ingred2.1, ingred2.2, ingred2.3, ingred2.4", 3.50m);
             menuOperations.AddMenuItemToList(menuItem2);
 
-            MenuItems menuItem3 = new MenuItems()
-            {
-                 
-
-            };
-
         }
 
         [TestMethod]

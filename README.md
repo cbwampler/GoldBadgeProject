@@ -1,3 +1,5 @@
+"# GoldBadgeFinal" 
+=======
 # GoldBadgeProject
 PURPOSE:
 This readme contains all the informaton necessary to view and run the Komodo Company Operations
@@ -97,12 +99,3 @@ For the Komodo Badges, the update feature is present; however, adding and removi
 There is definitely room for many improvements.  Due to time constraints, several enhancements were not able to be implemented.  These will be scheduled for future releases.
 All suggestions and creative critism is always welcome!
   
- 
-   
-
-
-
-
-
-
-

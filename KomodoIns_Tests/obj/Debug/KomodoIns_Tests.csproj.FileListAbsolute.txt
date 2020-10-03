@@ -1,0 +1,16 @@
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\KomodoIns_Tests.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\KomodoIns_Tests.pdb
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\KomodoIns_Repo.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\KomodoIns_Repo.pdb
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\obj\Debug\KomodoIns_Tests.csprojAssemblyReference.cache
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\obj\Debug\KomodoIns_Tests.csproj.CoreCompileInputs.cache
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\obj\Debug\KomodoIns_Tests.csproj.CopyComplete
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\obj\Debug\KomodoIns_Tests.dll
+C:\ElevenFiftyProjects\Komodo\KomodoIns_Tests\obj\Debug\KomodoIns_Tests.pdb
